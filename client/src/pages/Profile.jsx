@@ -20,6 +20,7 @@ import {
 } from "../redux/user/userSlice";
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -81,7 +82,9 @@ const Profile = () => {
         body: JSON.stringify(formData),
       });
 
-      console.log(res);
+      const data = await res.json(); // Extract JSON data from the response
+      console.log(data);
+
       if (data.success === false) {
         dispatch(updateUserFailure(data.message));
         return;
@@ -194,6 +197,12 @@ const Profile = () => {
           >
             {loading ? "Loading" : "Update"}
           </button>
+          <Link
+            className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95 marker:"
+            to="/create-listing"
+          >
+            Create Listing
+          </Link>
         </form>
         <div className="flex justify-between mt-5">
           <span
