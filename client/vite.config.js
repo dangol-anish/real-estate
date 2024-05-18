@@ -12,4 +12,15 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: "./index.html",
+      },
+      external: [
+        // Exclude mongoose and any other server-side dependencies
+        "mongoose",
+      ],
+    },
+  },
 });
