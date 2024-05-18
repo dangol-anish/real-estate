@@ -6,21 +6,10 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://real-estate-rose-zeta.vercel.app",
+        target: "https://real-estate-rose-zeta.vercel.app/",
         secure: false,
       },
     },
   },
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      input: {
-        main: "./index.html",
-      },
-      external: [
-        // Exclude mongoose and any other server-side dependencies
-        "mongoose",
-      ],
-    },
-  },
 });
