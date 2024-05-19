@@ -40,14 +40,14 @@ const Header = () => {
           <input
             type="search"
             name=""
-            placeholder="Search..."
+            placeholder="Search"
             id=""
-            className="bg-transparent bg-[#E5E5CB] focus:outline-none w-24 sm:w-64"
+            className="bg-transparent bg-[#E5E5CB] placeholder-[#1A120B] focus:outline-none w-24 sm:w-64"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button>
-            <FaSearch className="text-slate-400" />
+            <FaSearch className="text-[#1A120B]" />
           </button>
         </form>
         <ul className="flex gap-4 ">

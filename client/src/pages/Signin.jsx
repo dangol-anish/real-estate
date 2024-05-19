@@ -14,6 +14,7 @@ const Signin = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   // console.log(formData);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -73,7 +74,7 @@ const Signin = () => {
           />
           <button
             disabled={loading}
-            className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+            className="bg-[#1A120B] text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
           >
             {loading ? "Loading..." : "Sign In"}
           </button>
@@ -81,7 +82,7 @@ const Signin = () => {
         </form>
         <div className="flex gap-2 mt-5">
           <p>Dont have an account?</p>
-          <Link className="text-blue-700" to="/sign-up">
+          <Link className="text-[#3C2A21]" to="/sign-up">
             Sign Up
           </Link>
         </div>

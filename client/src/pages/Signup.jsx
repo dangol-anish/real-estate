@@ -48,7 +48,9 @@ const Signup = () => {
   return (
     <>
       <div className="p-3 max-w-lg mx-auto">
-        <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
+        <h1 className="text-3xl text-[#1A120B] text-center font-semibold my-7">
+          Sign Up
+        </h1>
         <form
           onSubmit={handleSubmit}
           action=""
@@ -77,7 +79,7 @@ const Signup = () => {
           />
           <button
             disabled={loading}
-            className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+            className="bg-[#1A120B] text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
           >
             {loading ? "Loading..." : "Sign Up"}
           </button>
@@ -85,11 +87,11 @@ const Signup = () => {
         </form>
         <div className="flex gap-2 mt-5">
           <p>Have an account?</p>
-          <Link className="text-blue-700" to="/sign-in">
+          <Link className="text-[#3C2A21]" to="/sign-in">
             Sign In
           </Link>
         </div>
-        {error && <p className="text-red-500 mt-5">{error}</p>}
+        {error && <p className="text-red-700 mt-5">{error}</p>}
       </div>
     </>
   );
