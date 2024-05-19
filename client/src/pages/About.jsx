@@ -3,10 +3,10 @@ import React from "react";
 export default function About() {
   return (
     <div className="py-20 px-4 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-slate-800">
+      <h1 className="text-3xl font-bold mb-4 text-[#1A120B]">
         About EstateGateway
       </h1>
-      <p className="mb-4 text-slate-700">
+      <p className="mb-4 text-[#1A120B]">
         Welcome to Estate Gateway!
         <br />
         At Estate Gateway, we believe that finding the perfect home or property
@@ -17,7 +17,7 @@ export default function About() {
         approach, deep market knowledge, and unwavering commitment to client
         satisfaction.
       </p>
-      <p className="mb-4 text-slate-700">
+      <p className="mb-4 text-[#1A120B]">
         <span className="text-[20px] font-medium">Who We Are</span>
         <br /> Estate Gateway was founded with the vision of creating a
         comprehensive, user-friendly platform that caters to all your real
@@ -28,7 +28,7 @@ export default function About() {
         estate market and are equipped to guide you through every step of the
         process.
       </p>
-      <p className="mb-4 text-slate-700">
+      <p className="mb-4 text-[#1A120B]">
         <span className="text-[20px] font-medium">Our Values</span>
         <ul className="flex flex-col gap-[12px]">
           <li>
