@@ -132,7 +132,10 @@ const Search = () => {
       <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen">
         <form onSubmit={handleSubmit} className="flex flex-col gap-8" action="">
           <div className="flex items-center gap-2 ">
-            <label className="whitespace-nowrap font-semibold" htmlFor="">
+            <label
+              className="whitespace-nowrap text-[#1A120B]  font-semibold"
+              htmlFor=""
+            >
               Search Term:
             </label>
             <input
@@ -146,7 +149,10 @@ const Search = () => {
             />
           </div>
           <div className="flex gap-2 flex-wrap items-center">
-            <label className="whitespace-nowrap font-semibold" htmlFor="">
+            <label
+              className="whitespace-nowrap font-semibold text-[#1A120B] "
+              htmlFor=""
+            >
               Type:
             </label>
             <div className="flex gap-2">
@@ -195,7 +201,10 @@ const Search = () => {
             </div>
           </div>
           <div className="flex gap-2 flex-wrap items-center">
-            <label className="whitespace-nowrap font-semibold" htmlFor="">
+            <label
+              className="whitespace-nowrap font-semibold text-[#1A120B] "
+              htmlFor=""
+            >
               Amenities:
             </label>
             <div className="flex gap-2">
@@ -230,7 +239,7 @@ const Search = () => {
               defaultValue={"created_at_desc"}
               name=""
               id="sort_order"
-              className="border rounded-lg p-3"
+              className="border rounded-lg p-3 text-[#1A120B] "
             >
               <option value="regularPrice_desc">Price High to Low</option>
               <option value="regularPrice_asc">Price Low to High</option>
@@ -244,15 +253,15 @@ const Search = () => {
         </form>
       </div>
       <div className="">
-        <h1 className="text-3xl font-semibold border-b p-3 text-slate-700 mt-5">
+        <h1 className="text-3xl font-semibold border-b p-3 text-[#1A120B]  mt-5">
           Listing Results
         </h1>
 
         <div className="p-7 flex justify-around gap-5 max-w-screen flex-wrap">
           {!loading && listings.length === 0 && (
-            <p className="text-xl text-slate-700">No Listing Found!</p>
+            <p className="text-xl text-[#1A120B] ">No Listing Found!</p>
           )}
-          {loading && <p className="text-xl text-slate-700">Loading...</p>}
+          {loading && <p className="text-xl text-[#1A120B] ">Loading...</p>}
           {!loading &&
             listings &&
             listings.map((listing) => (

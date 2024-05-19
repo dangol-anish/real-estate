@@ -348,12 +348,12 @@ const CreateLising = () => {
                 type="button"
                 disabled={uploading}
                 onClick={handleImageSubmit}
-                className="p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80"
+                className="p-3 text-green-900 border border-green-900 rounded uppercase hover:shadow-lg disabled:opacity-80"
               >
                 {uploading ? "Uploading..." : "Upload"}
               </button>
             </div>
-            <p className="text-red-700 text-sm">
+            <p className="text-red-900 text-sm">
               {imageUploadError && imageUploadError}
             </p>
             {formData.imageUrls.length > 0 &&
@@ -370,7 +370,7 @@ const CreateLising = () => {
                   <button
                     type="button"
                     onClick={() => handleRemoveImage(index)}
-                    className="p-3 text-red-700 rounded-lg uppercase hover:opacity-75"
+                    className="p-3 text-red-900 rounded-lg uppercase hover:opacity-75"
                   >
                     Delete
                   </button>
@@ -378,11 +378,11 @@ const CreateLising = () => {
               ))}
             <button
               disabled={loading || uploading}
-              className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+              className="p-3 bg-[#1A120B] text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
             >
               {loading ? "Loading..." : "Create Listing"}
             </button>
-            {error && <p className="text-red-700 text-sm">{error}</p>}
+            {error && <p className="text-red-900 text-sm">{error}</p>}
           </div>
         </form>
       </main>

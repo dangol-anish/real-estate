@@ -190,13 +190,13 @@ const Profile = () => {
 
           <p className="text-sm self-center">
             {fileUploadError ? (
-              <span className="text-red-700">
+              <span className="text-red-900">
                 Error while uploading the image (Image must be less than 2 MB.)
               </span>
             ) : filePerc > 0 && filePerc < 100 ? (
-              <span className="text-slate-700">{`Uploading ${filePerc}%`}</span>
+              <span className="text-slate-900">{`Uploading ${filePerc}%`}</span>
             ) : filePerc === 100 ? (
-              <span className="text-green-700">
+              <span className="text-green-900">
                 Image Uploaded Successfully!
               </span>
             ) : (
@@ -229,12 +229,12 @@ const Profile = () => {
           />
           <button
             disabled={loading}
-            className="bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80"
+            className="bg-[#1A120B]  text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80"
           >
             {loading ? "Loading" : "Update"}
           </button>
           <Link
-            className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95 marker:"
+            className="bg-green-900 text-white p-3 rounded-lg uppercase text-center hover:opacity-95 marker:"
             to="/create-listing"
           >
             Create Listing
@@ -243,22 +243,22 @@ const Profile = () => {
         <div className="flex justify-between mt-5">
           <span
             onClick={handleDeleteUser}
-            className="text-red-700 cursor-pointer"
+            className="text-red-900 cursor-pointer"
           >
             Delete Account
           </span>
-          <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
+          <span onClick={handleSignOut} className="text-red-900 cursor-pointer">
             Sign Out
           </span>
         </div>
-        <p className="text-red-700 mt-5">{error ? error : ""}</p>
-        <p className="text-green-700 mt-5">
+        <p className="text-red-900 mt-5">{error ? error : ""}</p>
+        <p className="text-green-900 mt-5">
           {updateSuccess ? "User updated Successfully" : ""}
         </p>
-        <button onClick={handleShowListings} className="text-green-700 w-full">
+        <button onClick={handleShowListings} className="text-green-900 w-full">
           Show Listings
         </button>
-        <p className="text-red-700 mt-5">
+        <p className="text-red-900 mt-5">
           {showListingsError ? "Error showing lists" : ""}
         </p>
         {userListings && userListings.length > 0 && (
@@ -279,19 +279,19 @@ const Profile = () => {
                   />
                 </Link>
                 <Link
-                  className="text-slate-700 font-semibold   hover:underline truncate flex-1"
+                  className="text-slate-900 font-semibold   hover:underline truncate flex-1"
                   to={`/listing/${listing._id}`}
                 >
                   <p>{listing.name}</p>
                 </Link>
                 <div className="flex gap-4">
                   <Link to={`/update-listing/${listing._id}`}>
-                    <button className="text-green-700">Edit</button>
+                    <button className="text-green-900">Edit</button>
                   </Link>
 
                   <button
                     onClick={() => handleListingDelete(listing._id)}
-                    className="text-red-700"
+                    className="text-red-900"
                   >
                     Delete
                   </button>
