@@ -24,17 +24,17 @@ const Header = () => {
     }
   }, []);
   return (
-    <header className="bg-slate-200 shadow-md">
+    <header className="bg-[#D5CEA3] shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-slate-700">real</span>
-            <span className="text-slate-900">Estate</span>
+            <span className="text-[#3C2A21]">Estate</span>
+            <span className="text-[#1A120B]">Gateway</span>
           </h1>
         </Link>
         <form
           action=""
-          className="bg-slate-100 p-3 rounded-lg flex items-center"
+          className="bg-[#E5E5CB] p-3 rounded-lg flex items-center"
           onSubmit={handleSubmit}
         >
           <input
@@ -42,7 +42,7 @@ const Header = () => {
             name=""
             placeholder="Search..."
             id=""
-            className="bg-transparent focus:outline-none w-24 sm:w-64"
+            className="bg-transparent bg-[#E5E5CB] focus:outline-none w-24 sm:w-64"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -53,13 +53,13 @@ const Header = () => {
         <ul className="flex gap-4 ">
           <Link to="/">
             {" "}
-            <li className="hidden sm:inline text-slate-700 hover:underline cursor-pointer font-semibold">
+            <li className="hidden sm:inline text-#3C2A21 hover:underline cursor-pointer font-semibold">
               Home
             </li>
           </Link>
           <Link to="/about">
             {" "}
-            <li className="hidden sm:inline text-slate-700 hover:underline cursor-pointer font-semibold">
+            <li className="hidden sm:inline text-#3C2A21 hover:underline cursor-pointer font-semibold">
               About
             </li>
           </Link>
@@ -71,7 +71,7 @@ const Header = () => {
                 alt="user-image"
               />
             ) : (
-              <li className=" text-slate-700 hover:underline cursor-pointer font-semibold">
+              <li className=" text-#3C2A21 hover:underline cursor-pointer font-semibold">
                 {" "}
                 Sign in
               </li>

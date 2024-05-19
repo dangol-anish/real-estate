@@ -12,17 +12,19 @@ const ListingItem = ({ listing }) => {
           alt=""
         />
         <div className="p-3 flex flex-col gap-2 w-full ">
-          <p className="truncate text-lg font-semibold text-slate-700">
+          <p className="truncate text-lg font-semibold text-[#1A120B]">
             {listing.name}
           </p>
           <div className="flex items-center gap-1">
-            <MdLocationOn className="h-4 w-4 text-green-700 line-clamp-1" />
-            <p className="text-sm text-gray-600 truncate ">{listing.address}</p>
+            <MdLocationOn className="h-4 w-4 text-green-500 line-clamp-1" />
+            <p className="text-sm text-[#3C2A21] truncate ">
+              {listing.address}
+            </p>
           </div>
-          <p className="text-sm text-gray-600 line-clamp-2">
+          <p className="text-sm text-[#3C2A21] line-clamp-2">
             {listing.description}
           </p>
-          <p className="text-slate-500 mt-2 font-semibold">
+          <p className="text-[#3C2A21] mt-2 font-semibold">
             $
             {listing.offer
               ? listing.discountPrice.toLocaleString("en-US")
